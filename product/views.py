@@ -1,5 +1,3 @@
-from hmac import digest
-from unicodedata import digit
 from rest_framework.decorators import api_view
 from product.models import Product, Category
 from rest_framework.response import Response
@@ -130,3 +128,5 @@ def delete_product(request, pk):
     product = Product.objects.get(pk=pk)
     product.delete()
     return Response(status=200)
+
+
